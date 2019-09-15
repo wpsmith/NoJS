@@ -1,0 +1,31 @@
+{
+  "name": "wpsmith/nojs",
+  "description": "No JS checker for WP.",
+  "keywords": [
+    "wordpress",
+    "scripts",
+    "no-js"
+  ],
+  "homepage": "https://github.com/wpsmith/NoJS",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Travis Smith",
+      "email": "t@wpsmith.net",
+      "homepage": "https://wpsmith.net/",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/wpsmith/NoJS/issues"
+  },
+  "require": {
+    "php": ">=7.0.0",
+    "wpsmith/singleton": "dev-master",
+  },
+  "autoload": {
+    "psr-4": {
+      "WPS\\WP\\Scripts\\": "src/"
+    }
+  }
+}
