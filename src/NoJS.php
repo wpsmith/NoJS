@@ -52,20 +52,22 @@ if ( ! class_exists( __NAMESPACE__ . '\NoJS' ) ) {
 				$hook = 'wp_body_open';
 			}
 
-			add_action( $hook, function () {
-				?>
-				<script>
-                    //<![CDATA[
-                    (function () {
-                        var c = document.body.classList;
-                        c.remove('no-js');
-                        c.add('js');
-                    })();
-                    //]]>
-				</script>
-				<?php
-			}, -1 );
+			add_action( $hook, [ $this, 'nojs' ], - 1 );
 
+		}
+
+		public function nojs() {
+			?>
+            <script>
+                //<![CDATA[
+                (function () {
+                    var c = document.body.classList;
+                    c.remove('no-js');
+                    c.add('js');
+                })();
+                //]]>
+            </script>
+			<?php
 		}
 
 	}
